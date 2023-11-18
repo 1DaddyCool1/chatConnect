@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#121B22"
     tools:context=".LoginActivity">
 
     <Button
@@ -12,16 +13,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Введите свой номер телефона"
+        android:textColor="@android:color/white"
         android:textAllCaps="false"
         android:textSize="18sp"
         android:maxLines="1"
-        android:background="@android:color/white"/>
+        android:background="#121B22"/>
 
     <TextView
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="WhatsApp отправит SMS-сообщение, чтобы подтвердить ваш номер телефофна"
+        android:text="ChatConnect отправит SMS-сообщение, чтобы подтвердить ваш номер телефофна"
+        android:textColor="@android:color/white"
         android:layout_below="@id/login_title"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
@@ -36,13 +39,19 @@
         android:layout_below="@+id/tv1"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
-        android:hint="номер телефона"/>
+        android:hint="номер телефона"
+        android:textColorHint="@android:color/white"
+        android:background="@drawable/edit_text"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        />
 
     <TextView
         android:id="@+id/tv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Мобильный оператор может взимать плату за SMS"
+        android:textColor="@android:color/white"
         android:layout_below="@id/login_for_input"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
@@ -58,7 +67,7 @@
         android:layout_below="@+id/tv2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:background="@color/colorPrimary"
+        android:background="#0095D6"
         android:textColor="@android:color/white"/>
 
     <EditText
@@ -68,7 +77,12 @@
         android:layout_below="@+id/tv1"
         android:layout_centerHorizontal="true"
         android:hint="Введите код подтверждения"
-        android:visibility="invisible"/>
+        android:textColorHint="@android:color/white"
+        android:background="@drawable/edit_text"
+        android:padding="10dp"
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        />
 
     <Button
         android:id="@+id/login_verification_button"
@@ -83,6 +97,15 @@
         android:textColor="@android:color/white"
         android:visibility="invisible"/>
 
-
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Регистрация с email"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="#0095D6"
+        android:textColor="@android:color/white"/>
 
 </RelativeLayout>

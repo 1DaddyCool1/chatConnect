@@ -25,12 +25,11 @@ import java.util.concurrent.TimeUnit;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button nextButton, verificationButton;
+    private Button nextButton, verificationButton, registerButton;
     private EditText phoneInput, verificationCodeInput;
     private TextView tv2;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     private String mVerificationId;
-    private PhoneAuthProvider.ForceResendingToken mResendToken;
     private FirebaseAuth mAuth;
     private ProgressDialog loadingBar;
 
@@ -40,11 +39,19 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         nextButton = (Button) findViewById(R.id.login_next_button);
+
+        registerButton = (Button) findViewById(R.id.register_button);
+
         verificationButton = (Button) findViewById(R.id.login_verification_button);
+
         verificationCodeInput = (EditText) findViewById(R.id.login_verification_input);
+
         phoneInput = (EditText) findViewById(R.id.login_for_input);
+
         tv2 = (TextView) findViewById(R.id.tv2);
+
         mAuth = FirebaseAuth.getInstance();
+
         loadingBar = new ProgressDialog(this);
 
         nextButton.setOnClickListener(v -> {
@@ -67,6 +74,11 @@ public class LoginActivity extends AppCompatActivity {
                         LoginActivity.this,
                         mCallbacks);
             }
+        });
+
+        registerButton.setOnClickListener(v -> {
+            Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(registerIntent);
         });
 
         verificationButton.setOnClickListener(v -> {
@@ -113,7 +125,6 @@ public class LoginActivity extends AppCompatActivity {
             {
 
                 mVerificationId = verificationId;
-                mResendToken = token;
 
                 loadingBar.dismiss();
 
