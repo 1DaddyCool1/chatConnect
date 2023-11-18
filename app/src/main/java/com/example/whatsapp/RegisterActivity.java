@@ -77,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
         else
         {
             loadingBar.setTitle("Вход в аккаунт");
-            loadingBar.setMessage("Пожалуйста подождите");
+            loadingBar.setMessage("Пожалуйста, подождите");
             loadingBar.setCanceledOnTouchOutside(true);
             loadingBar.show();
 
@@ -121,7 +121,7 @@ public class RegisterActivity extends AppCompatActivity {
         else
         {
             loadingBar.setTitle("Создание аккаунта");
-            loadingBar.setMessage("Пожалуйста подождите");
+            loadingBar.setMessage("Пожалуйста, подождите");
             loadingBar.setCanceledOnTouchOutside(true);
             loadingBar.show();
 
