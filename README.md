@@ -176,7 +176,7 @@ See `app/build.gradle.kts` for complete list.
 
 - **GitHub:** [@1DaddyCool1](https://github.com/1DaddyCool1)
 - **Skills:** Android Development (Java) • Firebase Integration • Backend Development (Java, C#/.NET) • Clean Architecture • OOP
-- **Status:** Open to work 🚀 - Seeking junior-level Android/Backend positions
+- **Status:** Open to work 🚀. Seeking junior-level Android/Backend positions
 
 ## 🤝 Contributing
 
